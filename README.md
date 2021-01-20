@@ -1,1 +1,1 @@
-# construcao_software
+# Small Trade Manager

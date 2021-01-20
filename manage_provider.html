@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<link href="img/favicon.svg" hreflang="pt-br" rel="icon" type="image/svg+xml"/>
+	<link href="css/bootstrap.css" hreflang="en" rel="stylesheet" type="text/css"/>
+	<meta charset="utf-8"/>
+	<meta content="Luiz Joaquim Aderaldo Amichi" name="author"/>
+	<meta content="Gerenciador de clientes, compras, fornecedores, funcionários, produtos em estoque e vendas" name="description"/>
+	<meta content="Cliente, comércio, compra, controle, estoque, fornecedor, funcionário, gerenciador, produto, venda" name="keywords"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>Small Trade Manager &#8211; Gerenciar Fornecedor</title>
+</head>
+
+<body class="bg-light">
+	<header>
+		<nav class="bg-dark navbar navbar-dark navbar-expand-lg">
+			<a class="navbar-brand" href="#">
+				<img alt="Small Trade Manager" class="align-top d-inline-block mx-3" height="30" src="img/favicon.svg" style="filter: invert(1);" width="30"/>
+				Small Trade Manager
+			</a>
+			<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="ml-auto navbar-nav">
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="index.html" target="_self">Início</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_client.html" target="_self">Clientes</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_purchase.html" target="_self">Compras</a>
+					</li>
+					<li class="active mx-2 nav-item">
+						<a class="nav-link" href="search_provider.html" target="_self">Fornecedores</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_employee.html" target="_self">Funcionários</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_budget.html" target="_self">Orçamentos</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_product.html" target="_self">Produtos</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_report.html" target="_self">Relatórios</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_service.html" target="_self">Serviços</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_sale.html" target="_self">Vendas</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="login.html" target="_self">Sair</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="my-3 text-center">
+			<img alt="Fornecedor" class="img-fluid mx-3" height="50" src="img/provider.svg" width="50"/>
+			<h2>Gerenciar Fornecedor</h2>
+		</div>
+
+		<form accept-charset="utf-8" action="/manage_provider" autocomplete="on" enctype="application/x-www-form-urlencoded" id="manage_provider" method="get" name="manage_provider" rel="noopener" target="_self">
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="company_name">Razão Social</label>
+					<input autofocus class="form-control" form="manage_provider" id="company_name" name="company_name" required type="text" value="Sindicato Dos Trabalhadores em Estabelecimentos Públicos de Maringá"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="fantasy_name">Nome Fantasia</label>
+					<input class="form-control" form="manage_provider" id="fantasy_name" name="fantasy_name" required type="text" value="Sinteemar"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="state_registration">Inscrição Estadual</label>
+					<input class="form-control" form="manage_provider" id="state_registration" name="state_registration" required type="text" value="Isento"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="cnpj">CNPJ</label>
+					<input class="form-control" form="manage_provider" id="cnpj" maxlength="18" minlength="18" name="cnpj" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2}" required type="text" value="78.846.250/0001-34"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="foundation_date">Data de Fundação</label>
+					<input class="form-control" form="manage_provider" id="foundation_date" name="foundation_date" required type="date" value="1985-09-11"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="email">E-mail</label>
+					<input class="form-control" form="manage_provider" id="email" name="email" type="email" value="sinteemar@sinteemar.com"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="address">Endereço</label>
+					<input class="form-control" form="manage_provider" id="address" name="address" value="Rua Professor Itamar Orlando Soares, 357" type="text"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="complement">Complemento</label>
+					<input class="form-control" form="manage_provider" id="complement" name="complement" value="Prédio azul" type="text"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="postal_code">CEP</label>
+					<input class="form-control" form="manage_provider" id="postal_code" maxlength="8" minlength="8" name="postal_code" pattern="[0-9]{5}-[0-9]{3}" type="text" value="87020-270"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="district">Bairro</label>
+					<input class="form-control" form="manage_provider" id="district" name="district" type="text" value="Jardim Universitário"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="city">Cidade</label>
+					<input class="form-control" form="manage_provider" id="city" name="city" required type="text" value="Maringá"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="state">Estado</label>
+					<select class="form-control" form="manage_provider" id="state" name="state" required>
+						<option disabled value="">Escolha um estado</option>
+						<option value="AC">Acre (AC)</option>
+						<option value="AL">Alagoas (AL)</option>
+						<option value="AP">Amapá (AP)</option>
+						<option value="AM">Amazonas (AM)</option>
+						<option value="BA">Bahia (BA)</option>
+						<option value="CE">Ceará (CE)</option>
+						<option value="DF">Distrito Federal (DF)</option>
+						<option value="ES">Espírito Santo (ES)</option>
+						<option value="GO">Goiás (GO)</option>
+						<option value="MA">Maranhão (MA)</option>
+						<option value="MT">Mato Grosso (MT)</option>
+						<option value="MS">Mato Grosso do Sul (MS)</option>
+						<option value="MG">Minas Gerais (MG)</option>
+						<option value="PA">Pará (PA)</option>
+						<option value="PB">Paraíba (PB)</option>
+						<option selected value="PR">Paraná (PR)</option>
+						<option value="PE">Pernambuco (PE)</option>
+						<option value="PI">Piauí (PI)</option>
+						<option value="RJ">Rio de Janeiro (RJ)</option>
+						<option value="RN">Rio Grande do Norte (RN)</option>
+						<option value="RS">Rio Grande do Sul (RS)</option>
+						<option value="RO">Rondônia (RO)</option>
+						<option value="RR">Roraima (RR)</option>
+						<option value="SC">Santa Catarina (SC)</option>
+						<option value="SP">São Paulo (SP)</option>
+						<option value="SE">Sergipe (SE)</option>
+						<option value="TO">Tocantins (TO)</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="phone">Telefone</label>
+					<input class="form-control" form="manage_provider" id="phone" maxlength="10" minlength="10" name="phone" pattern="\([0-9]{2}\)\s[0-9]{4}-[0-9]{4}" type="tel" value="(44) 3225-1611"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="cell_phone">Celular</label>
+					<input class="form-control" form="manage_provider" id="cell_phone" maxlength="11" minlength="11" name="cell_phone" pattern="\([0-9]{2}\)\s[0-9]{5}-[0-9]{4}" type="tel" value="(44) 99961-3561"/>
+				</div>
+			</div>
+
+			<input class="btn btn-primary" form="manage_provider" type="submit" value="Alterar">
+			<button class="btn btn-danger" data-target="#modalRemove" data-toggle="modal" type="button">Remover</button>
+		</form>
+	</div>
+
+	<footer class="bg-dark mt-3 py-3 text-white-50">
+		<div class="container text-center">
+			<small>Copyright &copy; 2020. Todos os direitos reservados.</small>
+		</div>
+	</footer>
+
+	<div class="modal fade" id="modalRemove" tabindex="-1" role="dialog" aria-labelledby="modalRemove" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Confirmação de remoção</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Tem certeza que deseja remover o fornecedor?
+					<br/>
+					<small>* A operação é irreversível.</small>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger">Sim</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>

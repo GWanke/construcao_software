@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<link href="img/favicon.svg" hreflang="pt-br" rel="icon" type="image/svg+xml"/>
+	<link href="css/bootstrap.css" hreflang="en" rel="stylesheet" type="text/css"/>
+	<meta charset="utf-8"/>
+	<meta content="Luiz Joaquim Aderaldo Amichi" name="author"/>
+	<meta content="Gerenciador de clientes, compras, fornecedores, funcionários, produtos em estoque e vendas" name="description"/>
+	<meta content="Cliente, comércio, compra, controle, estoque, fornecedor, funcionário, gerenciador, produto, venda" name="keywords"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<title>Small Trade Manager &#8211; Cadastrar Produto</title>
+</head>
+
+<body class="bg-light">
+	<header>
+		<nav class="bg-dark navbar navbar-dark navbar-expand-lg">
+			<a class="navbar-brand" href="#">
+				<img alt="Small Trade Manager" class="align-top d-inline-block mx-3" height="30" src="img/favicon.svg" style="filter: invert(1);" width="30"/>
+				Small Trade Manager
+			</a>
+			<button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="ml-auto navbar-nav">
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="index.html" target="_self">Início</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_client.html" target="_self">Clientes</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_purchase.html" target="_self">Compras</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_provider.html" target="_self">Fornecedores</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_employee.html" target="_self">Funcionários</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_budget.html" target="_self">Orçamentos</a>
+					</li>
+					<li class="active mx-2 nav-item">
+						<a class="nav-link" href="search_product.html" target="_self">Produtos</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_report.html" target="_self">Relatórios</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_service.html" target="_self">Serviços</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="search_sale.html" target="_self">Vendas</a>
+					</li>
+					<li class="mx-2 nav-item">
+						<a class="nav-link" href="login.html" target="_self">Sair</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container">
+		<div class="my-3 text-center">
+			<img alt="Produto" class="img-fluid mx-3" height="50" src="img/product.svg" width="50"/>
+			<h2>Cadastrar Produto</h2>
+		</div>
+
+		<form accept-charset="utf-8" action="/insert_product" autocomplete="on" enctype="application/x-www-form-urlencoded" id="insert_product" method="get" name="insert_product" rel="noopener" target="_self">
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="code">Código</label>
+					<input autofocus class="form-control" form="insert_product" id="code" name="code" placeholder="1049690302" required type="text"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="name">Nome</label>
+					<input class="form-control" form="insert_product" id="name" name="name" placeholder="Headset Gamer HyperX Cloud Revolver" required type="text"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="provider">Fornecedor</label>
+					<input class="form-control" form="insert_product" id="provider" list="providers" name="provider" placeholder="Compubrás" type="text"/>
+					<datalist id="providers">
+						<option value="Burger Perk">
+						<option value="Casa São Paulo">
+						<option value="Cocamar">
+						<option value="Compubrás">
+						<option value="Pedro Granado Imóveis">
+						<option value="Posto Maranello">
+						<option value="Roberto's Pastel">
+						<option value="Sinteemar">
+						<option value="Syma Solutions">
+						<option value="Zacarias Veículos">
+					</datalist>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="unity">Unidade</label>
+					<select class="form-control" form="insert_product" id="unity" name="unity" required>
+						<option disabled selected value="">Escolha uma unidade de medida</option>
+						<option value="CT">CT</option>
+						<option value="CX">CX</option>
+						<option value="DZ">DZ</option>
+						<option value="GS">GS</option>
+						<option value="PA">PA</option>
+						<option value="PR">PR</option>
+						<option value="PT">PT</option>
+						<option value="PÇ">PÇ</option>
+						<option value="RL">RL</option>
+						<option value="UN">UN</option>
+						<option value="cm">cm</option>
+						<option value="cm2">cm2</option>
+						<option value="g">g</option>
+						<option value="kg">kg</option>
+						<option value="l">l</option>
+						<option value="m">m</option>
+						<option value="m2">m2</option>
+						<option value="m3">m3</option>
+						<option value="ml">ml</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="gross_price">Preço Bruto</label>
+					<input class="form-control" form="insert_product" id="gross_price" name="gross_price" pattern="[0-9]*[,]?[0-9]+" placeholder="420,00" required type="text"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="net_price">Preço Líquido</label>
+					<input class="form-control" form="insert_product" id="net_price" name="net_price" pattern="[0-9]*[,]?[0-9]+" placeholder="890,00" required type="text"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="minimum_stock">Estoque Mínimo</label>
+					<input class="form-control" form="insert_product" id="minimum_stock" min="1" name="minimum_stock" placeholder="5" type="number"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="maximum_stock">Estoque Máximo</label>
+					<input class="form-control" form="insert_product" id="maximum_stock" min="1" name="maximum_stock" placeholder="50" type="number"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="amount">Quantidade</label>
+					<input class="form-control" form="insert_product" id="amount" min="0" name="amount" placeholder="30" type="number"/>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="weigth">Peso</label>
+					<input class="form-control" form="insert_product" id="weigth" name="weigth" pattern="[0-9]*[,]?[0-9]+" placeholder="1,270" type="text"/>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="col-md-6 form-group">
+					<label for="situation">Situação</label>
+					<select class="form-control" form="insert_product" id="situation" name="situation" required>
+						<option disabled selected value="">Escolha uma opção</option>
+						<option value="0">Inativo</option>
+						<option value="1">Ativo</option>
+					</select>
+				</div>
+				<div class="col-md-6 form-group">
+					<label for="source">Origem</label>
+					<select class="form-control" form="insert_product" id="source" name="source" required>
+						<option disabled selected value="">Escolha uma opção</option>
+						<option value="0">Nacional</option>
+						<option value="1">Internacional</option>
+					</select>
+				</div>
+			</div>
+
+			<input class="btn btn-primary" form="insert_product" type="submit" value="Cadastrar">
+			<input class="btn btn-dark" form="insert_product" type="reset" value="Limpar">
+		</form>
+	</div>
+
+	<footer class="bg-dark mt-3 py-3 text-white-50">
+		<div class="container text-center">
+			<small>Copyright &copy; 2020. Todos os direitos reservados.</small>
+		</div>
+	</footer>
+
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+
+</html>
